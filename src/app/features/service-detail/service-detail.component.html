@@ -1,0 +1,215 @@
+<div *ngIf="service" class="service-detail-container animate-fade-in-up">
+  
+  <!-- Breadcrumbs & Service Hero -->
+  <section class="service-hero-banner">
+    <div class="container">
+      <nav class="breadcrumbs">
+        <a routerLink="/">Home</a>
+        <span class="breadcrumbs-separator">&rarr;</span>
+        <span class="breadcrumbs-current">Services</span>
+        <span class="breadcrumbs-separator">&rarr;</span>
+        <span class="breadcrumbs-current">{{ service.name }}</span>
+      </nav>
+      
+      <span class="badge badge-highlight">🛡️ Security Solution</span>
+      <h1 class="service-page-title">{{ service.name }} in Chennai</h1>
+      <p class="service-page-subtitle">{{ service.shortDesc }}</p>
+    </div>
+  </section>
+
+  <!-- Core Product Details Grid -->
+  <section class="section container">
+    <div class="grid grid-2" style="gap: 3.5rem; align-items: flex-start;">
+      
+      <!-- Left side: Narrative, Features, Applications & Installation Info -->
+      <div class="detail-main-content">
+        <h2 class="detail-block-title">Overview & Product Engineering</h2>
+        <p class="detail-long-desc">{{ service.longDesc }}</p>
+        
+        <!-- Large visual image of the service -->
+        <div class="detail-showcase-image-frame">
+          <img [src]="service.imageUrl" alt="{{ service.name }} installation detail" class="detail-showcase-img" loading="lazy">
+        </div>
+        
+        <h3 class="detail-subtitle">Key Product Benefits</h3>
+        <ul class="detail-feature-list">
+          <li *ngFor="let feat of service.features">
+            <span class="detail-check-icon">✓</span>
+            <span class="detail-feat-text">{{ feat }}</span>
+          </li>
+        </ul>
+
+        <h3 class="detail-subtitle" style="margin-top: 2.5rem;">Applications & Use Cases</h3>
+        <ul class="detail-apps-list">
+          <li *ngFor="let app of service.applications">
+            <span class="app-marker">&bull;</span>
+            <span class="app-text">{{ app }}</span>
+          </li>
+        </ul>
+
+        <div class="installation-info-box">
+          <h4>🛠️ Professional Installation Standard</h4>
+          <p>{{ service.installationInfo }}</p>
+        </div>
+      </div>
+
+      <!-- Right side: Technical Specs & Quick CTAs -->
+      <div class="detail-sidebar">
+        <!-- Specs Card -->
+        <div class="card specs-card">
+          <h3 class="specs-title">Technical Specifications</h3>
+          <table class="specs-data-table">
+            <tbody>
+              <tr *ngFor="let key of specKeys">
+                <td class="spec-name">{{ key }}</td>
+                <td class="spec-value">{{ service.specifications[key] }}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Sidebar Call CTA -->
+        <div class="card sidebar-cta-box section-bg-dark text-center">
+          <h4>Request Free Estimate</h4>
+          <p>Book a slot for doorstep measurements and samples display in Chennai.</p>
+          <div class="sidebar-actions">
+            <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%;">
+              💬 Message on WhatsApp
+            </a>
+            <a href="tel:9676510575" class="btn btn-white" style="width: 100%; margin-top: 0.85rem;">
+              📞 Call Now: +91 96765 10575
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section class="section container reveal-on-scroll">
+    <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 3.5rem auto;">
+      <span class="badge">Ashwini Safety Nets</span>
+      <h2>Why Choose Us for {{ service.name }}</h2>
+      <p class="text-muted">We combine certified materials and technical precision to deliver neat, secure fittings.</p>
+    </div>
+
+    <div class="grid grid-4" style="gap: 1.5rem;">
+      <div *ngFor="let item of chooseUs" class="card" style="padding: 2.25rem 2rem; display: flex; flex-direction: column; align-items: center; text-align: center; border-radius: var(--radius-lg); border: 1px solid var(--border-color); background: var(--bg-white); box-shadow: var(--shadow-sm); transition: transform var(--transition-normal), box-shadow var(--transition-normal);">
+        <span style="font-size: 2.25rem; margin-bottom: 1.25rem; display: inline-block;">{{ item.icon }}</span>
+        <h4 style="font-weight: 700; color: var(--color-primary); margin-bottom: 0.5rem; font-size: 1.15rem;">{{ item.title }}</h4>
+        <p class="text-muted" style="font-size: 0.85rem; line-height: 1.5; margin-bottom: 0;">{{ item.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Installation Process Section -->
+  <section class="section section-bg-light reveal-on-scroll">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4.5rem auto;">
+        <span class="badge">Workflow</span>
+        <h2>Our {{ service.name }} Fitting Process</h2>
+        <p class="text-muted">A structured four-step timeline detailing how we measure, align, and anchor safety grids.</p>
+      </div>
+
+      <div class="grid grid-4" style="gap: 1.5rem; position: relative;">
+        <div *ngFor="let step of processSteps" class="card" style="background: var(--bg-white); padding: 2.25rem; border-radius: var(--radius-lg); border: 1px solid var(--border-color); box-shadow: var(--shadow-sm); text-align: center; display: flex; flex-direction: column; gap: 0.75rem; position: relative;">
+          <div style="background-color: var(--color-accent-hover); color: white; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 800; font-size: 1rem; margin: 0 auto; box-shadow: var(--shadow-sm);">
+            {{ step.step }}
+          </div>
+          <h4 style="font-size: 1.15rem; font-weight: 700; margin: 0.5rem 0 0 0;">{{ step.title }}</h4>
+          <p class="text-muted" style="font-size: 0.85rem; line-height: 1.5; margin: 0;">{{ step.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section (Structured for easy replacement of images) -->
+  <section class="section section-bg-light reveal-on-scroll" id="gallery">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 3.5rem auto;">
+        <span class="badge">Portfolio</span>
+        <h2>Recent Installations Gallery</h2>
+        <p class="text-muted">Actual preview of our grid alignments and installations (Representative Images).</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Image Card 1 -->
+        <div class="gallery-item-card">
+          <div class="gallery-image-frame">
+            <img src="assets/images/gallery/balcony-work.webp" alt="Residential Apartment Balcony Netting" class="gallery-image-img" loading="lazy">
+          </div>
+          <div class="gallery-meta">
+            <h5>Residential Apartment Balcony</h5>
+            <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 0;">Representative Image &bull; Chennai</p>
+          </div>
+        </div>
+
+        <!-- Image Card 2 -->
+        <div class="gallery-item-card">
+          <div class="gallery-image-frame">
+            <img src="assets/images/gallery/grill-work.webp" alt="High-Rise Window Protection Invisible Grill" class="gallery-image-img" loading="lazy">
+          </div>
+          <div class="gallery-meta">
+            <h5>High-Rise Window Protection</h5>
+            <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 0;">Representative Image &bull; Chennai</p>
+          </div>
+        </div>
+
+        <!-- Image Card 3 -->
+        <div class="gallery-item-card">
+          <div class="gallery-image-frame">
+            <img src="assets/images/gallery/sports-work.webp" alt="Commercial Duct Shaft Netting" class="gallery-image-img" loading="lazy">
+          </div>
+          <div class="gallery-meta">
+            <h5>Commercial Duct Shaft Netting</h5>
+            <p class="text-muted" style="font-size: 0.8rem; margin-bottom: 0;">Representative Image &bull; Chennai</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Accordion section -->
+  <section class="section container reveal-on-scroll" id="service-faq">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <div class="section-header text-center" style="margin-bottom: 3.5rem;">
+        <span class="badge">FAQs</span>
+        <h2>{{ service.name }} FAQ</h2>
+        <p class="text-muted">Answers to technical queries about our {{ service.name }} installations.</p>
+      </div>
+
+      <div class="faq-accordion-list">
+        <details *ngFor="let f of service.faqs" class="faq-accordion-card">
+          <summary class="faq-accordion-summary">
+            <span>{{ f.question }}</span>
+            <span class="arrow-indicator">&darr;</span>
+          </summary>
+          <div class="faq-accordion-body">
+            <p>{{ f.answer }}</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internal Linking / Related Services -->
+  <section class="section-bg-light reveal-on-scroll" style="padding: 5rem 0;">
+    <div class="container">
+      <h3 style="margin-bottom: 2rem;" class="text-center">Other Safety Services We Offer</h3>
+      <div class="grid grid-3 related-services-grid">
+        <div *ngFor="let rel of relatedServices" class="card related-service-card">
+          <span style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;">{{ rel.icon }}</span>
+          <h4 style="margin-bottom: 0.5rem;">{{ rel.name }}</h4>
+          <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 1.25rem;">{{ rel.shortDesc }}</p>
+          <a [routerLink]="['/services', rel.id]" class="related-link-btn">View Service &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Integration -->
+  <section class="section container reveal-on-scroll" id="quote" style="border-top: 1px solid var(--border-color); padding-top: 6rem;">
+    <app-quote-form></app-quote-form>
+  </section>
+</div>

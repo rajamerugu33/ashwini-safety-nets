@@ -1,0 +1,92 @@
+.quote-form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2.5rem;
+}
+
+.form-header {
+  margin-bottom: 2rem;
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.form-group label {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+}
+
+.required {
+  color: #DC2626;
+  margin-left: 0.1rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-light);
+  color: var(--color-text-dark);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.15);
+  background-color: var(--bg-white);
+}
+
+/* Invalid State Styles */
+.form-control.is-invalid {
+  border-color: #DC2626;
+  background-color: rgba(220, 38, 38, 0.02);
+}
+
+.form-control.is-invalid:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.form-submit-container {
+  margin-top: 1rem;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1.05rem;
+  box-shadow: var(--shadow-accent);
+}
+
+/* -------------------------------------------------------------
+   Responsive Breakpoints
+   ------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .form-row {
+    flex-direction: row;
+  }
+}

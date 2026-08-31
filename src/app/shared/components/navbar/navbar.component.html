@@ -1,0 +1,76 @@
+<nav class="navbar" [class.navbar-scrolled]="isScrolled">
+  <div class="navbar-container">
+    <!-- Brand Logo -->
+    <a routerLink="/" class="navbar-logo" (click)="closeMenu()">
+      <img src="assets/images/branding/logo.jpg" alt="Ashwini Safety Nets Logo" class="logo-img">
+      <span class="logo-text">{{ businessName }}</span>
+    </a>
+
+    <!-- Mobile Toggler -->
+    <button class="navbar-toggler" (click)="toggleMenu()" aria-label="Toggle Navigation">
+      <span class="toggler-bar" [class.open]="isMenuOpen"></span>
+      <span class="toggler-bar" [class.open]="isMenuOpen"></span>
+      <span class="toggler-bar" [class.open]="isMenuOpen"></span>
+    </button>
+
+    <!-- Menu links -->
+    <div class="navbar-menu" [class.active]="isMenuOpen">
+      <a routerLink="/" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
+        <span class="nav-link-icon">🏠</span>
+        <span class="nav-link-text">Home</span>
+      </a>
+      
+      <!-- Desktop & Mobile Dropdown Link -->
+      <div class="nav-item-dropdown" [class.dropdown-active]="isServicesOpen">
+        <a href="#" class="nav-item nav-dropdown-toggle" (click)="toggleServices($event)">
+          <span class="nav-link-label">
+            <span class="nav-link-icon">🛡️</span>
+            <span class="nav-link-text">Services</span>
+          </span>
+          <span class="arrow-indicator">▼</span>
+        </a>
+        
+        <!-- Dropdown menu panel -->
+        <div class="dropdown-panel" [class.panel-open]="isServicesOpen">
+          <div class="dropdown-grid">
+            <a *ngFor="let s of services" [routerLink]="['/services', s.id]" class="dropdown-link-item" (click)="closeMenu()">
+              <span class="dropdown-item-icon">{{ s.icon }}</span>
+              <span class="dropdown-item-name">{{ s.name }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <a [routerLink]="['/about']" class="nav-item" routerLinkActive="active" (click)="closeMenu()">
+        <span class="nav-link-icon">🏢</span>
+        <span class="nav-link-text">About Us</span>
+      </a>
+      <a [routerLink]="['/gallery']" class="nav-item" routerLinkActive="active" (click)="closeMenu()">
+        <span class="nav-link-icon">🖼️</span>
+        <span class="nav-link-text">Gallery</span>
+      </a>
+      <a [routerLink]="['/reviews']" class="nav-item" routerLinkActive="active" (click)="closeMenu()">
+        <span class="nav-link-icon">⭐</span>
+        <span class="nav-link-text">Reviews</span>
+      </a>
+      <a [routerLink]="['/blog']" class="nav-item" routerLinkActive="active" (click)="closeMenu()">
+        <span class="nav-link-icon">📝</span>
+        <span class="nav-link-text">Blog</span>
+      </a>
+      <a [routerLink]="['/']" fragment="quote" class="nav-item" (click)="closeMenu()">
+        <span class="nav-link-icon">📞</span>
+        <span class="nav-link-text">Contact</span>
+      </a>
+
+      <!-- Desktop Primary CTA -->
+      <a [routerLink]="['/']" fragment="quote" class="nav-item btn btn-primary nav-cta desktop-only-cta" (click)="closeMenu()">Get Free Quote</a>
+
+      <!-- Mobile Drawer CTAs -->
+      <div class="mobile-menu-ctas">
+        <a [href]="contact.phoneCallUrl" class="btn btn-secondary mobile-drawer-btn">📞 Call Now</a>
+        <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp mobile-drawer-btn">💬 WhatsApp</a>
+        <a [routerLink]="['/']" fragment="quote" class="btn btn-primary mobile-drawer-btn" (click)="closeMenu()">📋 Get Free Quote</a>
+      </div>
+    </div>
+  </div>
+</nav>

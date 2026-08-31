@@ -1,0 +1,341 @@
+/* -------------------------------------------------------------
+   1. Service Detail Hero & Breadcrumbs
+   ------------------------------------------------------------- */
+.service-hero-banner {
+  background: linear-gradient(135deg, #E0F7FF 0%, #FFFFFF 100%);
+  color: var(--color-primary);
+  padding: 6rem 0 4rem 0;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+.breadcrumbs-current {
+  color: var(--color-accent-hover);
+}
+
+.service-page-title {
+  color: var(--color-primary);
+  font-size: 2.25rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.85rem;
+}
+
+.service-page-subtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  max-width: 800px;
+  line-height: 1.55;
+}
+
+/* -------------------------------------------------------------
+   2. Main Narrative & Bullet lists
+   ------------------------------------------------------------- */
+.detail-block-title {
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+}
+
+.detail-long-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  color: var(--color-text-dark);
+}
+
+.detail-showcase-image-frame {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.detail-showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.detail-showcase-image-frame:hover .detail-showcase-img {
+  transform: scale(1.04);
+}
+
+.detail-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  color: var(--color-primary);
+}
+
+.detail-feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.detail-feature-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.detail-check-icon {
+  color: var(--color-accent-hover);
+  font-weight: bold;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+.detail-feat-text {
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+}
+
+.detail-apps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.detail-apps-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.app-marker {
+  color: var(--color-accent-hover);
+  font-weight: bold;
+}
+
+.app-text {
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+}
+
+.installation-info-box {
+  background-color: var(--color-accent-light);
+  border-left: 4px solid var(--color-accent-hover);
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+  margin-top: 3rem;
+  border-top: 1px solid rgba(56, 189, 248, 0.15);
+  border-right: 1px solid rgba(56, 189, 248, 0.15);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.installation-info-box h4 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.installation-info-box p {
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  color: var(--color-text-dark);
+  line-height: 1.6;
+}
+
+/* -------------------------------------------------------------
+   3. Sidebar Technical Specifications
+   ------------------------------------------------------------- */
+.specs-card {
+  padding: 1.75rem;
+  margin-bottom: 1.75rem;
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-color);
+}
+
+.specs-title {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.4rem;
+}
+
+.specs-data-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-data-table td {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+.specs-data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.spec-name {
+  font-weight: 700;
+  color: var(--color-primary);
+  width: 40%;
+}
+
+.spec-value {
+  color: var(--color-text-muted);
+}
+
+.sidebar-cta-box {
+  padding: 2.25rem 2rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.sidebar-cta-box h4 {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-cta-box p {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+/* -------------------------------------------------------------
+   4. Gallery Images Card (Neutral captions)
+   ------------------------------------------------------------- */
+.gallery-item-card {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal);
+}
+
+.gallery-item-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.gallery-image-frame {
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.gallery-image-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-item-card:hover .gallery-image-img {
+  transform: scale(1.05);
+}
+
+.gallery-meta {
+  padding: 1.25rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.gallery-meta h5 {
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+/* -------------------------------------------------------------
+   5. Service Specific FAQs
+   ------------------------------------------------------------- */
+.faq-accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.faq-accordion-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.faq-accordion-card[open] {
+  border-color: var(--color-accent-hover);
+}
+
+.faq-accordion-summary {
+  padding: 1.2rem 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-accordion-summary::-webkit-details-marker {
+  display: none;
+}
+
+.arrow-indicator {
+  color: var(--color-accent-hover);
+  transition: transform var(--transition-normal);
+}
+
+.faq-accordion-card[open] .arrow-indicator {
+  transform: rotate(180deg);
+}
+
+.faq-accordion-body {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.faq-accordion-body p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+}
+
+/* -------------------------------------------------------------
+   6. Related Services Grid
+   ------------------------------------------------------------- */
+.related-services-grid {
+  gap: 2rem;
+}
+
+.related-service-card {
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.related-link-btn {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-accent-hover);
+}
+
+.related-link-btn:hover {
+  color: #0056cc;
+}
+
+/* -------------------------------------------------------------
+   Responsive Breakpoints
+   ------------------------------------------------------------- */
+@media (min-width: 768px) {
+  .service-hero-banner {
+    padding: 6.5rem 0 4.5rem 0;
+  }
+
+  .service-page-title {
+    font-size: 2.75rem;
+  }
+}

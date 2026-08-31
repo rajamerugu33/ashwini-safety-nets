@@ -1,0 +1,903 @@
+/* -------------------------------------------------------------
+   1. Hero Section (Premium Split Layout)
+   ------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #E0F7FF 0%, #FFFFFF 100%);
+  color: var(--color-primary);
+  padding: 1.5rem 0 5rem 0; /* Reduced top padding to naturally attach hero after photo strip */
+  overflow: hidden;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 80% 20%, rgba(56, 189, 248, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero-container {
+  align-items: center;
+  gap: 4rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hero-title {
+  color: var(--color-primary);
+  font-size: 2.75rem;
+  line-height: 1.15;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2.25rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.btn-hero {
+  padding: 1rem 2.25rem;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.btn-call-hero {
+  background-color: var(--bg-white);
+  color: var(--color-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-call-hero:hover {
+  background-color: var(--color-accent-light);
+  border-color: var(--color-accent);
+}
+
+.hero-wa-link {
+  margin-bottom: 2.5rem;
+}
+
+.wa-quick-text {
+  font-size: 0.85rem;
+  color: #128C7E;
+  font-weight: 700;
+  border-bottom: 1px dashed #128C7E;
+}
+
+.wa-quick-text:hover {
+  color: var(--color-accent-hover);
+  border-bottom-color: var(--color-accent-hover);
+}
+
+.hero-trust-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.5rem;
+}
+
+.trust-metric {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.metric-icon {
+  color: var(--color-accent-hover);
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------
+   2. Hero Right Image Composition & Glass Badges
+   ------------------------------------------------------------- */
+.hero-image-composition {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero-main-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  border: 4px solid var(--bg-white);
+}
+
+.floating-badge {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8rem 1.25rem;
+  border-radius: var(--radius-md);
+  z-index: 3;
+  width: max-content;
+}
+
+.badge-1 {
+  top: 15%;
+  left: -15%;
+}
+
+.badge-2 {
+  bottom: 15%;
+  right: -10%;
+}
+
+.badge-icon {
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.badge-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.badge-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+}
+
+.badge-desc {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+/* -------------------------------------------------------------
+   3. Service Cards Redesign (Separated Layout)
+   ------------------------------------------------------------- */
+.services-grid {
+  gap: 2.5rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.service-img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+  background-color: var(--color-accent-light);
+}
+
+.service-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.service-icon-badge {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--bg-white);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+  border: 1px solid var(--border-color);
+}
+
+.service-card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.service-title-text {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.75rem;
+}
+
+.service-description-text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+  flex-grow: 1;
+}
+
+.service-actions-row {
+  margin-top: auto;
+}
+
+.btn-service-link {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--color-accent-hover);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.arrow-symbol {
+  transition: transform var(--transition-fast);
+}
+
+/* Card Hover States */
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-accent-hover);
+}
+
+.service-card:hover .service-card-img {
+  transform: scale(1.08);
+}
+
+.service-card:hover .arrow-symbol {
+  transform: translateX(4px);
+}
+
+/* -------------------------------------------------------------
+   4. Featured Large Split Section
+   ------------------------------------------------------------- */
+.featured-split-container {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.featured-image-wrapper {
+  width: 100%;
+  height: 380px;
+}
+
+.featured-solution-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-text-wrapper {
+  padding: 3rem 2.5rem;
+}
+
+.featured-bullets-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 1.5rem 0;
+}
+
+.featured-bullets-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.bullet-check {
+  color: var(--color-accent-hover);
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------
+   5. Why Choose Us Section
+   ------------------------------------------------------------- */
+.choose-us-grid {
+  gap: 2rem;
+}
+
+.trust-card {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem 2.25rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.trust-icon-box {
+  background: linear-gradient(135deg, var(--color-accent-light) 0%, rgba(255, 255, 255, 0.8) 100%);
+  color: var(--color-accent-hover);
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  box-shadow: 0 4px 10px rgba(56, 189, 248, 0.1);
+  transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.trust-card h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+}
+
+.trust-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* Hover effects */
+.trust-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent-hover);
+}
+
+.trust-card:hover .trust-icon-box {
+  transform: scale(1.1) rotate(5deg);
+  background: var(--color-accent-hover);
+  color: white;
+  box-shadow: var(--shadow-royal);
+}
+
+/* -------------------------------------------------------------
+   6. masonry/Editorial Gallery Section
+   ------------------------------------------------------------- */
+.gallery-masonry-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.gallery-masonry-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 3px solid var(--bg-white);
+  aspect-ratio: 4/3;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.gallery-masonry-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.gallery-card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, transparent 0%, rgba(22, 50, 79, 0.85) 100%);
+  padding: 1.5rem;
+  color: white;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+
+.gallery-card-overlay h5 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 0.15rem;
+}
+
+.gallery-card-overlay p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  margin-bottom: 0;
+}
+
+/* Gallery Hovers */
+.gallery-masonry-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gallery-masonry-card:hover .gallery-masonry-img {
+  transform: scale(1.06);
+}
+
+.gallery-masonry-card:hover .gallery-card-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -------------------------------------------------------------
+   7. Process Timeline Roadmap
+   ------------------------------------------------------------- */
+.process-timeline-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  position: relative;
+}
+
+.process-step-node {
+  background: var(--bg-white);
+  padding: 2.25rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  text-align: center;
+}
+
+.step-badge-number {
+  background-color: var(--color-accent-hover);
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin: 0 auto 1.25rem auto;
+  box-shadow: var(--shadow-royal);
+}
+
+.process-step-node h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.process-step-node p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* -------------------------------------------------------------
+   8. Chennai local Coverage Badges
+   ------------------------------------------------------------- */
+.areas-grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.area-badge-item {
+  background: var(--bg-white);
+  border: 1px solid var(--border-color);
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.area-badge-item:hover {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-light);
+  transform: translateY(-2px);
+}
+
+/* -------------------------------------------------------------
+   9. Customer Testimonials
+   ------------------------------------------------------------- */
+.review-card {
+  border-color: var(--border-color);
+}
+
+.review-stars-row {
+  color: var(--color-gold);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.review-comment-text {
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.review-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.review-author-name {
+  font-weight: 700;
+  color: var(--color-primary);
+  font-size: 0.95rem;
+}
+
+.review-location {
+  font-size: 0.8rem;
+}
+
+/* -------------------------------------------------------------
+   10. Accordion FAQs
+   ------------------------------------------------------------- */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.faq-block {
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.faq-block[open] {
+  border-color: var(--color-accent-hover);
+}
+
+.faq-summary {
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-summary-arrow {
+  color: var(--color-accent-hover);
+  font-weight: bold;
+  transition: transform var(--transition-normal);
+}
+
+.faq-block[open] .faq-summary-arrow {
+  transform: rotate(180deg);
+}
+
+.faq-desc-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
+
+.faq-desc-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* -------------------------------------------------------------
+   Responsive Breakpoints
+   ------------------------------------------------------------- */
+@media (max-width: 639px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .floating-badge {
+    display: none !important;
+    /* Hide floating badges on very narrow viewports */
+  }
+}
+
+@media (min-width: 640px) {
+  .hero-actions {
+    flex-direction: row;
+  }
+
+  .btn-hero {
+    width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.25rem;
+  }
+
+  .featured-image-wrapper {
+    height: 100%;
+  }
+
+  .gallery-masonry-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery-masonry-card.size-large {
+    grid-column: span 2;
+    aspect-ratio: 2/1;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-section {
+    padding: 10rem 0 7rem 0;
+  }
+
+  .hero-container {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+
+  .process-timeline-layout {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* horizontal connector line */
+  .process-timeline-layout::after {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 10%;
+    width: 80%;
+    height: 2px;
+    background-color: var(--border-color);
+    z-index: 1;
+  }
+
+  .process-step-node {
+    z-index: 2;
+  }
+}
+
+/* -------------------------------------------------------------
+   Centered Who We Are & Premium Feature Cards
+   ------------------------------------------------------------- */
+.about-centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-actions-centered {
+  width: 100%;
+}
+
+.about-cta-btn {
+  padding: 0.9rem 2.25rem;
+  font-size: 1rem;
+}
+
+/* Mobile buttons stack */
+@media (max-width: 575px) {
+  .about-actions-centered {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .about-cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Quality Feature Cards Styling */
+.quality-feature-card {
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.feat-icon {
+  font-size: 2.25rem;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.feat-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.feat-subtitle {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-accent-hover);
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.feat-desc {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* Gradients for each card */
+.feat-uv-net {
+  background: linear-gradient(135deg, #E0F7FF 0%, #FFFFFF 100%);
+}
+
+.feat-marine-steel {
+  background: linear-gradient(135deg, #EAF6FF 0%, #FFFFFF 100%);
+}
+
+.feat-fast-fitting {
+  background: linear-gradient(135deg, #E6FFFA 0%, #FFFFFF 100%);
+}
+
+.feat-wholesale-rates {
+  background: linear-gradient(135deg, #F0F5FF 0%, #FFFFFF 100%);
+}
+
+/* Hover effects */
+.quality-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--color-accent-hover);
+}
+
+.quality-feature-card:hover .feat-icon {
+  transform: scale(1.18) rotate(5deg);
+}
+
+/* Bottom Service Links Card styling */
+.bottom-service-link-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-primary);
+  font-weight: 700;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal), background-color var(--transition-normal);
+}
+
+.bottom-link-icon {
+  font-size: 1.35rem;
+}
+
+.bottom-link-name {
+  flex-grow: 1;
+  font-size: 0.9rem;
+  font-family: var(--font-heading);
+}
+
+.bottom-link-arrow {
+  color: var(--color-accent-hover);
+  transition: transform var(--transition-fast);
+}
+
+/* Hovers */
+.bottom-service-link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-accent-hover);
+  background-color: var(--color-accent-light);
+}
+
+.bottom-service-link-card:hover .bottom-link-arrow {
+  transform: translateX(4px);
+}
+
+/* -------------------------------------------------------------
+   12. Premium Project Photo Strip (Top of Homepage)
+   ------------------------------------------------------------- */
+.photo-strip-container {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-color);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.photo-strip-track {
+  display: flex;
+  white-space: nowrap;
+  gap: 0.5rem;
+  width: max-content;
+  padding: 0;
+  margin: 0;
+  animation: photo-marquee 32s linear infinite;
+}
+
+.photo-strip-track img {
+  height: 180px; /* Increased vertical height for prominent display (160-220px desktop range) */
+  width: 280px;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  flex-shrink: 0;
+  display: block;
+}
+
+@keyframes photo-marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 1rem 0 3.5rem 0;
+  }
+
+  .photo-strip-track img {
+    height: 125px; /* Increased vertical height for mobile display (110-150px mobile range) */
+    width: 190px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .photo-strip-track {
+    animation: none;
+    overflow-x: auto;
+    width: 100%;
+    justify-content: center;
+  }
+}

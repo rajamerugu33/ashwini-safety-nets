@@ -1,0 +1,511 @@
+<!-- Automatic Horizontal Photo Strip -->
+<div class="photo-strip-container">
+  <div class="photo-strip-track">
+    <img src="assets/images/services/safety-nets.webp" alt="Safety net installation showcase">
+    <img src="assets/images/services/balcony-safety-nets.webp" alt="Balcony safety net showcase">
+    <img src="assets/images/services/children-safety-nets.webp" alt="Children safety net installation">
+    <img src="assets/images/services/invisible-grills.webp" alt="Invisible grill installation showcase">
+    <img src="assets/images/gallery/balcony-work.webp" alt="Balcony net setup detail">
+    <img src="assets/images/gallery/grill-work.webp" alt="Window invisible grill setup">
+    <!-- Duplicate for infinite seamless scroll -->
+    <img src="assets/images/services/safety-nets.webp" alt="Safety net installation showcase">
+    <img src="assets/images/services/balcony-safety-nets.webp" alt="Balcony safety net showcase">
+    <img src="assets/images/services/children-safety-nets.webp" alt="Children safety net installation">
+    <img src="assets/images/services/invisible-grills.webp" alt="Invisible grill installation showcase">
+    <img src="assets/images/gallery/balcony-work.webp" alt="Balcony net setup detail">
+    <img src="assets/images/gallery/grill-work.webp" alt="Window invisible grill setup">
+  </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-bg-overlay"></div>
+  <div class="container hero-container grid grid-2">
+    <!-- Hero Left: Sales Copy & Actions -->
+    <div class="hero-content animate-fade-in-up stagger-1">
+      <span class="badge badge-highlight">🛡️ Ashwini Safety Nets | Chennai's Leading Specialist</span>
+      <h1 class="hero-title">Premium Safety Nets & Invisible Grills in Chennai</h1>
+      <p class="hero-subtitle">
+        Protect your family with ISO-standard materials, UV-protected netting, and professional same-day installation. Custom-fitted safety solutions for balcony, windows, and terraces in Chennai.
+      </p>
+
+      <!-- Primary and Secondary Actions -->
+      <div class="hero-actions">
+        <a href="#quote" class="btn btn-primary btn-hero">📋 Request Free Quote</a>
+        <a href="tel:9676510575" class="btn btn-secondary btn-hero btn-call-hero">
+          📞 Call: +91 96765 10575
+        </a>
+      </div>
+
+      <!-- WhatsApp quick chat link -->
+      <div class="hero-wa-link">
+        <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="wa-quick-text">
+          💬 Or click here to chat on WhatsApp for a quick estimate
+        </a>
+      </div>
+
+      <!-- Core trust markers -->
+      <div class="hero-trust-metrics">
+        <div class="trust-metric">
+          <span class="metric-icon">✓</span>
+          <span>Free Doorstep Inspection</span>
+        </div>
+        <div class="trust-metric">
+          <span class="metric-icon">✓</span>
+          <span>Heavy-Duty HDPE & SS316 Cords</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Right: Premium Image Composition with Floating Badges -->
+    <div class="hero-visual-wrapper animate-fade-in-up stagger-2">
+      <div class="hero-image-composition">
+        <img src="assets/images/hero/hero-safety-nets-chennai.webp" alt="Premium Balcony Safety Net Installation"
+          class="hero-main-img">
+
+        <!-- Floating Glassmorphic Badges -->
+        <div class="floating-badge badge-1 glass-card">
+          <span class="badge-icon">🛡️</span>
+          <div class="badge-texts">
+            <span class="badge-title">100% UV Protected</span>
+            <span class="badge-desc">Sun-resistant material</span>
+          </div>
+        </div>
+        <div class="floating-badge badge-2 glass-card">
+          <span class="badge-icon">⚡</span>
+          <div class="badge-texts">
+            <span class="badge-title">Same-Day Fitting</span>
+            <span class="badge-desc">Fast doorstep setup</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quick Trust Benefits Bar -->
+<div class="trust-benefits-bar section-bg-light" style="padding: 1.5rem 0; border-bottom: 1px solid var(--border-color);">
+  <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 1.5rem; text-align: center;">
+    <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--color-primary);">
+      <span>🛡️</span> <span>Quality Materials</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--color-primary);">
+      <span>🛠️</span> <span>Professional Installation</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--color-primary);">
+      <span>🧹</span> <span>Neat Finishing</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--color-primary);">
+      <span>☀️</span> <span>UV-Resistant Nets</span>
+    </div>
+    <div style="display: flex; align-items: center; gap: 0.5rem; font-weight: 600; font-size: 0.9rem; color: var(--color-primary);">
+      <span>📍</span> <span>Chennai-Wide Support</span>
+    </div>
+  </div>
+</div>
+
+<!-- About Section -->
+<section class="section container reveal-on-scroll" id="about">
+  <div class="about-centered-content text-center" style="max-width: 800px; margin: 0 auto 4rem auto;">
+    <span class="badge">Who We Are</span>
+    <h2 style="margin-top: 0.5rem; margin-bottom: 1.5rem; text-align: center;">Securing Chennai Homes & Balconies with Professional Precision</h2>
+    <p style="text-align: center;">
+      At <strong>{{ businessName }}</strong>, we are specialized safety netting and invisible grill engineers. We focus on installing high-quality, long-lasting safety barriers, including <a routerLink="/services/safety-nets">Safety Nets</a>, <a routerLink="/services/balcony-safety-nets">Balcony Safety Nets</a>, <a routerLink="/services/children-safety-nets">Children Safety Nets</a>, <a routerLink="/services/bird-protection-nets">Bird Protection Nets</a>, <a routerLink="/services/pigeon-nets">Pigeon Nets</a>, <a routerLink="/services/invisible-grills">Invisible Grills</a>, <a routerLink="/services/sports-nets">Sports Nets</a>, <a routerLink="/services/box-cricket-nets">Box Cricket Nets</a>, and <a routerLink="/services/industrial-safety-nets">Industrial Safety Nets</a>.
+    </p>
+    <p style="text-align: center;">
+      We prioritize safety and durability, using 100% UV-stabilized, high-density polyethylene (HDPE) monofilament threads and marine-grade SS316 stainless steel wires. Our trained technicians handle complex rope-access and high-rise structural setups safely across Chennai.
+    </p>
+
+    <!-- Centered CTAs -->
+    <div class="about-actions-centered"
+      style="margin-top: 2.5rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+      <a href="tel:+919676510575" class="btn btn-primary about-cta-btn">📞 Call Customer Support</a>
+      <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn btn-secondary about-cta-btn">💬
+        Message on WhatsApp</a>
+    </div>
+  </div>
+
+  <!-- Quality / Feature Cards Grid (4 Columns below the text) -->
+  <div class="about-features-grid grid grid-4">
+    <!-- Card 1 -->
+    <div class="card quality-feature-card feat-uv-net">
+      <span class="feat-icon">🛡️</span>
+      <h4 class="feat-title">100% UV Protection</h4>
+      <p class="feat-subtitle">UV-Protected Netting</p>
+      <p class="feat-desc text-muted">Resists sun damage and handles outdoor weather exposure.</p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card quality-feature-card feat-marine-steel">
+      <span class="feat-icon">⛓️</span>
+      <h4 class="feat-title">SS316 Grade</h4>
+      <p class="feat-subtitle">Marine Steel Core</p>
+      <p class="feat-desc text-muted">High-tensile steel core wires wrapped in protective nylon.</p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card quality-feature-card feat-fast-fitting">
+      <span class="feat-icon">⚡</span>
+      <h4 class="feat-title">Same-Day Fitting</h4>
+      <p class="feat-subtitle">Fast Response</p>
+      <p class="feat-desc text-muted">Prompt measurements and immediate setup availability.</p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card quality-feature-card feat-wholesale-rates">
+      <span class="feat-icon">💎</span>
+      <h4 class="feat-title">Direct Rates</h4>
+      <p class="feat-subtitle">Wholesale Pricing</p>
+      <p class="feat-desc text-muted">Affordable safety grids with no third-party markups.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Services Catalog Grid -->
+<section class="section section-bg-light reveal-on-scroll" id="services">
+  <div class="container">
+    <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem auto;">
+      <span class="badge">Our Solutions</span>
+      <h2>Safety Netting & Invisible Grill Catalog</h2>
+      <p class="text-muted" style="margin-top: 0.5rem;">
+        Browse our catalog of professional structural safety systems custom-fitted by our installation crew.
+      </p>
+    </div>
+
+    <!-- Loop through all 9 services dynamically -->
+    <div class="grid grid-3 services-grid">
+      <div *ngFor="let s of services" class="card service-card">
+        <!-- Service Card Image Frame -->
+        <div class="service-img-wrapper">
+          <img [src]="s.imageUrl" alt="{{ s.name }} Installation Image" class="service-card-img" loading="lazy">
+          <span class="service-icon-badge">{{ s.icon }}</span>
+        </div>
+
+        <div class="service-card-content">
+          <h3 class="service-title-text">{{ s.name }}</h3>
+          <p class="service-description-text text-muted">{{ s.shortDesc }}</p>
+          <div class="service-actions-row">
+            <a [routerLink]="['/services', s.id]" class="btn-service-link">
+              Learn More &amp; Pricing <span class="arrow-symbol">&rarr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Service Section (Large Split Section) -->
+<section class="section container reveal-on-scroll" id="featured-solution">
+  <div class="featured-split-container section-bg-soft-blue">
+    <div class="grid grid-2" style="align-items: center; gap: 0;">
+      <!-- Image side with overlap -->
+      <div class="featured-image-wrapper">
+        <img src="assets/images/services/safety-nets.webp" alt="Heavy-duty balcony netting mesh"
+          class="featured-solution-img">
+      </div>
+
+      <!-- Text details side -->
+      <div class="featured-text-wrapper">
+        <span class="badge">Featured Service</span>
+        <h2>High-Tension Balcony Enclosures</h2>
+        <p class="text-muted">
+          Our balcony safety grids protect children and pets from accidental falls without blocking sunlight or restricting natural ventilation.
+        </p>
+
+        <ul class="featured-bullets-list">
+          <li>
+            <span class="bullet-check">✓</span>
+            <span>Custom-locked perimeter rope anchorage</span>
+          </li>
+          <li>
+            <span class="bullet-check">✓</span>
+            <span>UV-resistant synthetic monofilament fibers</span>
+          </li>
+          <li>
+            <span class="bullet-check">✓</span>
+            <span>Professionally fitted by trained safety climbers</span>
+          </li>
+        </ul>
+
+        <div style="margin-top: 2rem;">
+          <a href="#quote" class="btn btn-primary">📋 Request Doorstep Measurement</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust Section: Why Choose Us -->
+<section class="section section-bg-light reveal-on-scroll" id="why-choose-us">
+  <div class="container">
+    <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem auto;">
+      <span class="badge">Our Standards</span>
+      <h2>Why Choose {{ businessName }}</h2>
+      <p class="text-muted" style="margin-top: 0.5rem;">
+        We follow strict technical guidelines to deliver safety enclosures that exceed durability expectations.
+      </p>
+    </div>
+
+    <div class="grid grid-3 choose-us-grid">
+      <div class="card trust-card">
+        <div class="trust-icon-box">🛡️</div>
+        <h4>Quality Materials</h4>
+        <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">
+          We use premium UV-resistant copolymer netting and marine-grade SS316 steel cables.
+        </p>
+      </div>
+      <div class="card trust-card">
+        <div class="trust-icon-box">🛠️</div>
+        <h4>Professional Installation</h4>
+        <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">
+          Our trained rope-access technicians install anchors securely at heights.
+        </p>
+      </div>
+      <div class="card trust-card">
+        <div class="trust-icon-box">🧹</div>
+        <h4>Neat & Clean Finish</h4>
+        <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">
+          We drill cleanly, tension the grids perfectly, and clean up workspace debris upon completion.
+        </p>
+      </div>
+      <div class="card trust-card">
+        <div class="trust-icon-box">⚙️</div>
+        <h4>Durable Fittings</h4>
+        <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">
+          We use heavy-duty fasteners and anchor hooks designed to prevent loosening or sagging.
+        </p>
+      </div>
+      <div class="card trust-card">
+        <div class="trust-icon-box">🤝</div>
+        <h4>Customer-Focused Service</h4>
+        <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">
+          Providing transparent communication, doorstep inspections, and reliable support.
+        </p>
+      </div>
+      <div class="card trust-card">
+        <div class="trust-icon-box">📍</div>
+        <h4>Chennai Coverage</h4>
+        <p class="text-muted" style="font-size: 0.9rem; margin-top: 0.5rem;">
+          Prompt support, quick measurements, and same-day fittings across Chennai.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Recent Projects Section -->
+<section class="section container reveal-on-scroll" id="gallery-portfolio">
+  <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 3.5rem auto;">
+    <span class="badge">Portfolio</span>
+    <h2>Recent Safety Net Installations</h2>
+    <p class="text-muted">Actual preview of our grid alignments, tension fits, and completed setups.</p>
+  </div>
+
+  <div class="grid grid-3 projects-grid">
+    <div *ngFor="let p of projects" class="card gallery-item-card">
+      <div class="gallery-image-frame">
+        <img [src]="p.imageUrl" alt="{{ p.title }} in {{ p.location }}, Chennai" class="gallery-image-img" loading="lazy">
+      </div>
+      <div class="gallery-meta">
+        <h5 style="margin-bottom: 0.25rem; font-weight: 700;">{{ p.title }}</h5>
+        <p class="text-primary font-weight-bold" style="font-size: 0.85rem; margin-bottom: 0.5rem; font-weight: 600;">📍 {{ p.location }}, Chennai</p>
+        <p class="text-muted" style="font-size: 0.85rem; margin-bottom: 1.25rem; line-height: 1.5;">{{ p.description }}</p>
+        <a [routerLink]="['/services', p.serviceId]" class="btn-service-link" style="font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.25rem;">
+          View Service <span class="arrow-symbol">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center" style="margin-top: 2.5rem;">
+    <a routerLink="/gallery" class="btn btn-secondary">🖼️ View All Projects Gallery &rarr;</a>
+  </div>
+</section>
+
+<!-- Process Section -->
+<section class="section section-bg-light reveal-on-scroll" id="process-roadmap">
+  <div class="container">
+    <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4.5rem auto;">
+      <span class="badge">Installation Steps</span>
+      <h2>Simple Installation Process</h2>
+      <p class="text-muted">How we assess, custom-fit, and lock safety grids in place for your homes.</p>
+    </div>
+
+    <div class="process-timeline-layout">
+      <!-- Step 1 -->
+      <div class="process-step-node">
+        <div class="step-badge-number">01</div>
+        <h4>Contact Us</h4>
+        <p class="text-muted">Submit your query via phone, WhatsApp, or form to discuss your requirements.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="process-step-node">
+        <div class="step-badge-number">02</div>
+        <h4>Site Measurement</h4>
+        <p class="text-muted">Our team checks the installation area and takes accurate site measurements.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="process-step-node">
+        <div class="step-badge-number">03</div>
+        <h4>Professional Installation</h4>
+        <p class="text-muted">Experienced technicians secure the safety nets or grills with strong anchors.</p>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="process-step-node">
+        <div class="step-badge-number">04</div>
+        <h4>Final Inspection</h4>
+        <p class="text-muted">We verify tension fits, check structural stability, and inspect finishing before handover.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Chennai Local SEO Coverage -->
+<section class="section container reveal-on-scroll" id="areas-served">
+  <div class="container text-center">
+    <div class="section-header" style="max-width: 700px; margin: 0 auto 3.5rem auto;">
+      <span class="badge">Coverage Areas</span>
+      <h2>Safety Nets Installation Across Chennai</h2>
+      <p class="text-muted" style="margin-top: 0.5rem;">
+        We provide quick doorstep measurements and safety installations across all neighborhoods in Chennai.
+      </p>
+    </div>
+
+    <div class="areas-grid-container">
+      <span *ngFor="let area of location.areas" class="area-badge-item">
+        📍 {{ area }}
+      </span>
+    </div>
+  </div>
+</section>
+
+<!-- Customer Reviews Section -->
+<section class="section section-bg-light reveal-on-scroll" id="testimonials">
+  <div class="container">
+    <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 4rem auto;">
+      <span class="badge">Feedback</span>
+      <h2>Customer Reviews & Testimonials</h2>
+      <p class="text-muted" style="margin-top: 0.5rem;">
+        Read genuine feedback from residential and commercial clients across Chennai who trust Ashwini Safety Nets.
+      </p>
+    </div>
+
+    <!-- Dynamic reviews loop -->
+    <div class="grid grid-3 reviews-grid" style="margin-bottom: 4.5rem;">
+      <div *ngFor="let r of reviews" class="card review-card"
+        style="background: var(--bg-white); padding: 2rem; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); display: flex; flex-direction: column; justify-content: space-between; gap: 1.25rem;">
+        <div class="review-top">
+          <div class="review-stars" style="color: #FBBF24; font-size: 1.1rem; margin-bottom: 0.75rem;">
+            <span *ngFor="let star of [1,2,3,4,5]">★</span>
+          </div>
+          <p class="review-text text-muted" style="font-size: 0.95rem; line-height: 1.6; font-style: italic;">
+            "{{ r.text }}"
+          </p>
+        </div>
+
+        <div class="review-author"
+          style="border-top: 1px solid var(--border-color); padding-top: 1rem; display: flex; flex-direction: column; gap: 0.15rem;">
+          <span class="author-name" style="font-weight: 700; color: var(--color-primary); font-size: 0.95rem;">{{ r.name
+            }}</span>
+          <span class="author-meta text-muted" style="font-size: 0.8rem;">📍 {{ r.area }} &bull; {{ r.service }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reviews-actions text-center" style="max-width: 600px; margin: 0 auto;">
+      <div class="card"
+        style="border-style: dashed; border-color: var(--color-accent); padding: 3rem 2rem; background: var(--bg-white);">
+        <span style="font-size: 2.5rem; display: block; margin-bottom: 1rem;">✍️</span>
+        <h4 style="margin-bottom: 0.5rem;">Have We Installed Safety Nets for You?</h4>
+        <p class="text-muted" style="font-size: 0.95rem; margin-bottom: 1.5rem;">
+          We value your feedback. Please share your safety netting experience or view reviews on Google search.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+          <a routerLink="/reviews" class="btn btn-primary" style="font-size: 0.85rem; padding: 0.65rem 1.25rem;">
+            ⭐ See All Customer Reviews
+          </a>
+          <a href="https://www.google.com/search?q=Ashwini+Safety+Nets+Chennai" target="_blank"
+            rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.85rem; padding: 0.65rem 1.25rem;">
+            🔍 View / Leave a Google Review
+          </a>
+          <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp"
+            style="font-size: 0.85rem; padding: 0.65rem 1.25rem;">
+            💬 Share Feedback via WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section container reveal-on-scroll" id="faq">
+  <div class="container" style="max-width: 800px;">
+    <div class="section-header text-center" style="margin-bottom: 4.5rem;">
+      <span class="badge">FAQ</span>
+      <h2>Frequently Asked Questions</h2>
+      <p class="text-muted" style="margin-top: 0.5rem;">Common questions about balcony safety nets, invisible grills,
+        and installations.</p>
+    </div>
+
+    <div class="faq-list">
+      <details *ngFor="let faq of faqs" class="faq-block">
+        <summary class="faq-summary">
+          <span>{{ faq.question }}</span>
+          <span class="faq-summary-arrow">&darr;</span>
+        </summary>
+        <div class="faq-desc-content">
+          <p>{{ faq.answer }}</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom Services Quick Links Grid Section -->
+<section class="section container reveal-on-scroll" id="bottom-services-nav"
+  style="border-top: 1px solid var(--border-color); padding-top: 5rem;">
+  <div class="section-header text-center" style="max-width: 700px; margin: 0 auto 3rem auto;">
+    <span class="badge">Quick Navigation</span>
+    <h2>Explore Our Safety Services</h2>
+    <p class="text-muted" style="margin-top: 0.5rem;">Quick links to get specifications, applications, and answers
+      specific to each safety solution.</p>
+  </div>
+
+  <div class="bottom-links-grid"
+    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 1rem;">
+    <a *ngFor="let s of services" [routerLink]="['/services', s.id]" class="bottom-service-link-card">
+      <span class="bottom-link-icon">{{ s.icon }}</span>
+      <span class="bottom-link-name">{{ s.name }}</span>
+      <span class="bottom-link-arrow">&rarr;</span>
+    </a>
+  </div>
+</section>
+
+<!-- Final CTA Section (Light Gradient) -->
+<section class="section section-bg-soft-blue reveal-on-scroll" id="final-conversion-cta">
+  <div class="container text-center" style="max-width: 700px; margin: 0 auto;">
+    <span class="badge">Safe Enclosures</span>
+    <h2 style="font-size: 2.25rem; margin-top: 0.5rem; margin-bottom: 1.5rem;">Let's make your space safer.</h2>
+    <p class="text-muted" style="font-size: 1.1rem; margin-bottom: 2.5rem;">
+      Contact us today for doorstep inspection, thread sample preview, and free estimation in Chennai. Same-day
+      installation is available depending on requirement.
+    </p>
+    <div style="display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap;">
+      <a href="tel:9676510575" class="btn btn-primary">📞 Call Customer Care</a>
+      <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+        💬 Chat on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Quote Form Embed Section -->
+<section class="section container reveal-on-scroll" id="quote"
+  style="border-top: 1px solid var(--border-color); padding-top: 6rem;">
+  <app-quote-form></app-quote-form>
+</section>

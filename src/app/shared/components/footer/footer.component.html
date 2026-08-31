@@ -1,0 +1,76 @@
+<footer class="footer">
+  <div class="container grid footer-grid">
+    <!-- Brand column -->
+    <div class="footer-col brand-col">
+      <h3 class="footer-logo">🛡️ {{ businessName }}</h3>
+      <p class="brand-description">
+        Premium installation of safety nets and invisible grills in Chennai. Certified technicians, high-tension
+        netting, and rust-proof marine-grade hardware.
+      </p>
+      <div class="working-hours">
+        <span class="hours-label">🕒 Working Hours:</span>
+        <span class="hours-value">{{ contact.workingHours }}</span>
+      </div>
+      <div class="office-location">
+        <span class="loc-label">📍 Office Address:</span>
+        <span class="loc-value">{{ contact.officeAddress }}</span>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4 class="col-title">Quick Links</h4>
+      <ul class="footer-links">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/about">About Us</a></li>
+        <li><a routerLink="/gallery">Gallery</a></li>
+        <li><a routerLink="/reviews">Reviews</a></li>
+        <li><a routerLink="/blog">Blog & Safety Guides</a></li>
+        <li><a [routerLink]="['/']" fragment="quote">Get Free Quote</a></li>
+      </ul>
+    </div>
+
+    <!-- Services Quick Links (Loops all 9 services) -->
+    <div class="footer-col services-col">
+      <h4 class="col-title">Our Services</h4>
+      <ul class="footer-links two-column-list">
+        <li *ngFor="let s of services">
+          <a [routerLink]="['/services', s.id]">{{ s.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact Info Column -->
+    <div class="footer-col contact-col">
+      <h4 class="col-title">Contact Us</h4>
+      <ul class="contact-info">
+        <li class="contact-item">
+          <span class="icon">📍</span>
+          <span>Chennai, Tamil Nadu, India</span>
+        </li>
+        <li class="contact-item">
+          <span class="icon">📞</span>
+          <a href="{{ contact.phoneCallUrl }}" class="contact-link">{{ contact.phonePlaceholder }}</a>
+        </li>
+        <li class="contact-item">
+          <span class="icon">✉️</span>
+          <a href="mailto:{{ contact.emailPlaceholder }}" class="contact-link">{{ contact.emailPlaceholder }}</a>
+        </li>
+      </ul>
+      <div class="footer-cta-block">
+        <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer"
+          class="btn btn-whatsapp footer-whatsapp-btn">
+          💬 Chat on WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright section -->
+  <div class="footer-bottom">
+    <div class="container footer-bottom-flex">
+      <p>&copy; {{ year }} {{ businessName }}. All rights reserved.</p>
+      <p class="designed-by">Corporate Safety Installation Partner &bull; Chennai</p>
+    </div>
+  </div>
+</footer>

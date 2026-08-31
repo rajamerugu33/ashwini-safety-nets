@@ -1,0 +1,41 @@
+<div class="blog-page-container animate-fade-in-up">
+
+  <!-- Header Banner -->
+  <section class="blog-hero-banner section-bg-light">
+    <div class="container text-center" style="max-width: 800px;">
+      <span class="badge badge-highlight">📚 Knowledge Center</span>
+      <h1 class="blog-title">Safety Nets & Invisible Grills Guides for Chennai</h1>
+      <p class="blog-subtitle text-muted">
+        Informative articles, installation tips, and balcony safety advice for homeowners and apartment residents across Chennai.
+      </p>
+    </div>
+  </section>
+
+  <!-- Blog Index Grid -->
+  <section class="section container">
+    <div class="grid grid-3 blog-grid">
+      <div *ngFor="let post of blogs" class="card blog-card">
+        <div class="blog-img-frame">
+          <img [src]="post.imageUrl" [alt]="post.title" class="blog-img" loading="lazy" width="400" height="250">
+          <span class="blog-category-badge">{{ post.category }}</span>
+        </div>
+        <div class="blog-card-body">
+          <div class="blog-meta">
+            <span>📅 {{ post.date }}</span>
+            <span>⏱️ {{ post.readTime }}</span>
+          </div>
+          <h2 class="blog-card-title">
+            <a [routerLink]="['/blog', post.slug]">{{ post.title }}</a>
+          </h2>
+          <p class="blog-excerpt text-muted">{{ post.excerpt }}</p>
+          <a [routerLink]="['/blog', post.slug]" class="blog-read-more">Read Full Guide &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Integration -->
+  <section class="section container" id="quote">
+    <app-quote-form></app-quote-form>
+  </section>
+</div>

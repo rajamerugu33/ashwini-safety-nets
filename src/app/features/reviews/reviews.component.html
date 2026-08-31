@@ -1,0 +1,66 @@
+<div class="reviews-page-container animate-fade-in-up">
+
+  <!-- Header Banner -->
+  <section class="reviews-hero-banner section-bg-light">
+    <div class="container text-center" style="max-width: 800px;">
+      <span class="badge badge-highlight">⭐ Verified Feedback</span>
+      <h1 class="reviews-title">What Our Chennai Customers Say About Us</h1>
+      <p class="reviews-subtitle text-muted">
+        Genuine feedback from homeowners, apartment owners, and property managers across Chennai who trust Ashwini Safety Nets for their safety requirements.
+      </p>
+
+      <!-- Trust Summary Metrics -->
+      <div class="reviews-trust-box">
+        <div class="trust-stat">
+          <span class="stat-number">4.9 ★</span>
+          <span class="stat-label">Average Customer Rating</span>
+        </div>
+        <div class="trust-stat-divider"></div>
+        <div class="trust-stat">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">ISO Material Quality</span>
+        </div>
+        <div class="trust-stat-divider"></div>
+        <div class="trust-stat">
+          <span class="stat-number">Same Day</span>
+          <span class="stat-label">Doorstep Service</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Grid -->
+  <section class="section container">
+    <div class="grid grid-3 reviews-grid">
+      <div *ngFor="let r of reviews" class="card review-card">
+        <div class="review-header">
+          <div class="review-stars">★★★★★</div>
+          <span class="review-date" *ngIf="r.date">{{ r.date }}</span>
+        </div>
+        <p class="review-text">"{{ r.text }}"</p>
+        <div class="review-author">
+          <div class="author-avatar">{{ r.name.charAt(0) }}</div>
+          <div class="author-info">
+            <h4 class="author-name">{{ r.name }}</h4>
+            <span class="author-location">📍 {{ r.area }} &bull; {{ r.service }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Bar -->
+    <div class="reviews-cta-box text-center" style="margin-top: 3.5rem;">
+      <h3>Ready to Secure Your Home?</h3>
+      <p class="text-muted">Join hundreds of satisfied families across Chennai who rely on Ashwini Safety Nets.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem;">
+        <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">💬 Get Quote via WhatsApp</a>
+        <a href="tel:9676510575" class="btn btn-secondary">📞 Call: +91 96765 10575</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Integration -->
+  <section class="section container" id="quote">
+    <app-quote-form></app-quote-form>
+  </section>
+</div>

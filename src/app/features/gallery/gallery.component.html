@@ -1,0 +1,51 @@
+<div class="gallery-page-container animate-fade-in-up">
+
+  <!-- Header Banner -->
+  <section class="gallery-hero-banner section-bg-light">
+    <div class="container text-center" style="max-width: 800px;">
+      <span class="badge badge-highlight">📷 Installation Portfolio</span>
+      <h1 class="gallery-title">Recent Safety Net & Invisible Grill Projects in Chennai</h1>
+      <p class="gallery-subtitle text-muted">
+        Explore actual photographs of our balcony safety net fittings, pigeon netting arrangements, and SS316 stainless steel invisible grills across Chennai neighborhoods.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filter Pills & Gallery Grid -->
+  <section class="section container">
+    <!-- Category Pills -->
+    <div class="gallery-filter-bar">
+      <button 
+        *ngFor="let cat of categories" 
+        class="filter-pill-btn" 
+        [class.active]="selectedCategory === cat" 
+        (click)="filterCategory(cat)">
+        {{ cat }}
+      </button>
+    </div>
+
+    <!-- Image Grid -->
+    <div class="grid grid-3 gallery-grid">
+      <div *ngFor="let p of filteredProjects" class="card gallery-card">
+        <div class="gallery-img-frame">
+          <img [src]="p.imageUrl" [alt]="p.title + ' in ' + p.location" class="gallery-img" loading="lazy" width="400" height="260">
+          <span class="gallery-badge">{{ p.serviceName }}</span>
+        </div>
+        <div class="gallery-info">
+          <h3 class="gallery-card-title">{{ p.title }}</h3>
+          <span class="gallery-location">📍 {{ p.location }}</span>
+          <p class="gallery-desc text-muted">{{ p.description }}</p>
+          <div class="gallery-card-actions">
+            <a [routerLink]="['/services', p.serviceId]" class="btn-link-sm">View Service &rarr;</a>
+            <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn-wa-sm">💬 Inquiry</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Form Integration -->
+  <section class="section container" id="quote">
+    <app-quote-form></app-quote-form>
+  </section>
+</div>

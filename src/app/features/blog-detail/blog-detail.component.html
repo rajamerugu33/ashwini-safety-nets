@@ -1,0 +1,81 @@
+<div *ngIf="post" class="blog-detail-page animate-fade-in-up">
+
+  <!-- Header Banner -->
+  <section class="post-hero-banner section-bg-light">
+    <div class="container" style="max-width: 850px;">
+      <nav class="breadcrumbs" style="margin-bottom: 1.25rem;">
+        <a routerLink="/">Home</a>
+        <span class="breadcrumbs-separator">&rarr;</span>
+        <a routerLink="/blog">Blog</a>
+        <span class="breadcrumbs-separator">&rarr;</span>
+        <span class="breadcrumbs-current">{{ post.category }}</span>
+      </nav>
+
+      <span class="badge badge-highlight">{{ post.category }}</span>
+      <h1 class="post-page-title">{{ post.title }}</h1>
+      
+      <div class="post-meta-bar">
+        <span>📅 Published: {{ post.date }}</span>
+        <span>⏱️ {{ post.readTime }}</span>
+        <span>📍 Chennai, Tamil Nadu</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content & Sidebar -->
+  <section class="section container" style="max-width: 1050px;">
+    <div class="grid grid-2 post-layout" style="gap: 3.5rem; align-items: flex-start;">
+      
+      <!-- Article Main Body -->
+      <article class="post-main-article">
+        <div class="post-featured-frame">
+          <img [src]="post.imageUrl" [alt]="post.title" class="post-featured-img">
+        </div>
+
+        <div class="post-html-content" [innerHTML]="post.content"></div>
+
+        <!-- Service Cross-Link Box -->
+        <div class="service-crosslink-card" *ngIf="post.serviceLink">
+          <h4>Need {{ post.serviceName }} Installation in Chennai?</h4>
+          <p>We provide doorstep measurement, material samples display, and same-day installation across all Chennai locations.</p>
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+            <a [routerLink]="post.serviceLink" class="btn btn-primary">Explore {{ post.serviceName }} Details &rarr;</a>
+            <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">💬 Chat on WhatsApp</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="post-sidebar">
+        <!-- Contact Card -->
+        <div class="card sidebar-box section-bg-dark text-center">
+          <h4>Free Doorstep Estimate</h4>
+          <p>Get a instant quote and material demonstration at your apartment in Chennai.</p>
+          <a [href]="getWhatsAppLink()" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" style="width: 100%; margin-bottom: 0.75rem;">
+            💬 Message on WhatsApp
+          </a>
+          <a href="tel:9676510575" class="btn btn-white" style="width: 100%;">
+            📞 Call: +91 96765 10575
+          </a>
+        </div>
+
+        <!-- Related Guides -->
+        <div class="card sidebar-box" style="margin-top: 2rem;">
+          <h4 style="margin-bottom: 1rem; color: var(--color-primary);">Related Safety Guides</h4>
+          <div class="related-posts-list">
+            <div *ngFor="let rel of relatedPosts" class="related-post-item">
+              <a [routerLink]="['/blog', rel.slug]" class="related-post-title">{{ rel.title }}</a>
+              <span class="related-post-meta">{{ rel.category }} &bull; {{ rel.readTime }}</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- Quote Form Integration -->
+  <section class="section container" id="quote">
+    <app-quote-form></app-quote-form>
+  </section>
+</div>

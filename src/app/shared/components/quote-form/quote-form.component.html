@@ -1,0 +1,83 @@
+<div class="quote-form-container card">
+  <div class="form-header text-center">
+    <span class="badge">Instant Estimation</span>
+    <h2>Get a Free Quote</h2>
+    <p class="text-muted" style="font-size: 0.90rem; margin-top: 0.5rem;">
+      Fill out the short form below. Upon submission, we will open WhatsApp with your pre-filled inquiry details for instant response.
+    </p>
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #quoteForm="ngForm" class="quote-form">
+    <!-- Row: Name & Mobile Number -->
+    <div class="form-row">
+      <div class="form-group">
+        <label for="name">Your Name <span class="required">*</span></label>
+        <input 
+          type="text" 
+          id="name" 
+          name="name" 
+          [(ngModel)]="formData.name" 
+          required 
+          placeholder="e.g., Sundar Raman"
+          class="form-control"
+          #name="ngModel"
+          [class.is-invalid]="name.touched && name.invalid"
+        >
+      </div>
+
+      <div class="form-group">
+        <label for="mobile">Mobile Number <span class="required">*</span></label>
+        <input 
+          type="tel" 
+          id="mobile" 
+          name="mobile" 
+          [(ngModel)]="formData.mobile" 
+          required 
+          placeholder="e.g., 9876543210"
+          class="form-control"
+          #mobile="ngModel"
+          [class.is-invalid]="mobile.touched && mobile.invalid"
+        >
+      </div>
+    </div>
+
+    <!-- Row: Address -->
+    <div class="form-group">
+      <label for="address">Installation Address <span class="required">*</span></label>
+      <input 
+        type="text" 
+        id="address" 
+        name="address" 
+        [(ngModel)]="formData.address" 
+        required
+        placeholder="e.g., Flat 4B, Blue Meadows Apartment, Velachery, Chennai"
+        class="form-control"
+        #address="ngModel"
+        [class.is-invalid]="address.touched && address.invalid"
+      >
+    </div>
+
+    <!-- Row: Requirement (Textarea) -->
+    <div class="form-group">
+      <label for="requirement">Requirement Details <span class="required">*</span></label>
+      <textarea 
+        id="requirement" 
+        name="requirement" 
+        [(ngModel)]="formData.requirement" 
+        required
+        rows="4" 
+        placeholder="e.g., Need balcony safety nets (approx 12x10 ft) and invisible grills for 2 bedroom windows."
+        class="form-control"
+        #requirement="ngModel"
+        [class.is-invalid]="requirement.touched && requirement.invalid"
+      ></textarea>
+    </div>
+
+    <!-- Submit button -->
+    <div class="form-submit-container">
+      <button type="submit" class="btn btn-primary submit-btn">
+        💬 Get Free Quote on WhatsApp
+      </button>
+    </div>
+  </form>
+</div>
